@@ -10,7 +10,7 @@ const EducationCard = ({ image, alt, school, program, grade, description }) => {
                     <p>{program}</p>
                 </article>
             </div>
-            <p className="grade"><b>Grade</b>: {grade}</p>
+            <p className="grade">{grade}</p>
             <p>{description}</p>
         </div>
     )

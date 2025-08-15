@@ -22,7 +22,48 @@
 import useScrollAnimation from "./scroll"
 
 const Portfolio = () => {
-const projects = [
+
+  useScrollAnimation();
+  const phrases = ["Full Stack Developer", "Programmer", "Problem Solver"];
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+
+    const handleTyping = () => {
+      setText((prev) =>
+        isDeleting
+          ? currentPhrase.substring(0, prev.length - 1)
+          : currentPhrase.substring(0, prev.length + 1)
+      );
+
+      if (!isDeleting && text === currentPhrase) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setPhraseIndex((prev) => (prev + 1) % phrases.length); 
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, phraseIndex]);
+
+const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+  const projects = [
   {
     image: ecommerce,
     imagename: "ecommerceimage",
@@ -105,47 +146,6 @@ const projects = [
     projectdirectory: "https://city-shop-ecommerce.vercel.app",
   },
 ];
-  useScrollAnimation();
-  const phrases = ["Full Stack Developer", "Programmer", "Problem Solver"];
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const currentPhrase = phrases[phraseIndex];
-    const typingSpeed = isDeleting ? 50 : 100;
-
-    const handleTyping = () => {
-      setText((prev) =>
-        isDeleting
-          ? currentPhrase.substring(0, prev.length - 1)
-          : currentPhrase.substring(0, prev.length + 1)
-      );
-
-      if (!isDeleting && text === currentPhrase) {
-        setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setPhraseIndex((prev) => (prev + 1) % phrases.length); 
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, phraseIndex]);
-
-const [isMobile, setIsMobile] = useState(false);
-
-useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
-
-  handleResize();
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
 
   
  
@@ -350,7 +350,7 @@ useEffect(() => {
                             alt="uilogo"
                             school="University of Ibadan, Oyo State, Nigeria."
                             program="Bachelor of Technology - BTech"
-                            grade="5.00 CGPA"
+                            grade="Undergraduate"
                             description="I am currently studying Civil Engineering at University of Ibadan, and I have completed four semesters with a CGPA of 5.00. Throughout my studies, I’ve built a strong foundation in key areas such as Structural Analysis, Geotechnical Engineering, Fluid Mechanics, Transportation Engineering, Surveying, and Engineering Mechanics. I’m also an active member of the Nigerian Institution of Civil Engineers (NICE) student chapter, where I collaborate with fellow students on technical workshops, site visits, and hands-on projects. These experiences are not only enhancing my academic knowledge but also preparing me to contribute meaningfully to the development of safe, sustainable infrastructure in the real world."
                         />
                     </div>

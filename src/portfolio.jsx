@@ -351,7 +351,7 @@ useEffect(() => {
                             school="University of Ibadan, Oyo State, Nigeria."
                             program="Bachelor of Technology - BTech"
                             grade="Undergraduate"
-                            description="I am currently studying Civil Engineering at University of Ibadan, and I have completed four semesters with a CGPA of 5.00. Throughout my studies, I’ve built a strong foundation in key areas such as Structural Analysis, Geotechnical Engineering, Fluid Mechanics, Transportation Engineering, Surveying, and Engineering Mechanics. I’m also an active member of the Nigerian Institution of Civil Engineers (NICE) student chapter, where I collaborate with fellow students on technical workshops, site visits, and hands-on projects. These experiences are not only enhancing my academic knowledge but also preparing me to contribute meaningfully to the development of safe, sustainable infrastructure in the real world."
+                            description="I am currently studying Civil Engineering at University of Ibadan, and I have completed one semester."
                         />
                     </div>
                 </div>

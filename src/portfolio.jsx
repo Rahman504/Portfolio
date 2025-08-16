@@ -351,7 +351,7 @@ useEffect(() => {
                             school="University of Ibadan, Oyo State, Nigeria."
                             program="Bachelor of Technology - BTech"
                             grade="Undergraduate"
-                            description="I am currently studying Civil Engineering at University of Ibadan, and I have completed one semester."
+                            description="I am currently studying Civil Engineering at the University of Ibadan, and I have completed one semester."
                         />
                     </div>
                 </div>

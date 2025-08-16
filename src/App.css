@@ -315,7 +315,7 @@ body {
 }
 
 #contact {
-  margin: 40px auto 60px;
+  margin: 20px auto 60px;
   width: 60%;
 }
 #contact > p {
@@ -415,6 +415,9 @@ footer p {
   .menu-btn {
     display: block;
   }
+   body {
+    overflow-x: hidden;
+  }
   .header {
     padding: 20px;
   }
@@ -422,15 +425,42 @@ footer p {
     justify-content: space-between;
   }
   .header .nav-links {
-    display: none;
+     display: flex;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
     background-color: #1E293B;
-    padding: 10px 0;
+    opacity: 0; 
+    position: absolute;
+    border-radius: 0px 0px 20px 20px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+    z-index: 1000;  
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    
   }
   .header .nav-links.open {
-    display: flex;
+    opacity: 0.8;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+  .header .nav-links div {
+       display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
   }
   .target-cursor {
     box-shadow: 0 0 6px #38BDF8, 0 0 12px #F042FF;
@@ -459,11 +489,15 @@ footer p {
     width: 100%;
   }
   #skills > p, #projects > p, #contact > p {
-    width: 80%;
+    width: 90%;
   }
   #education, #contact {
     width: 90%;
   }
+  
+.education-card > div img {
+  width: 20%;
+}
  #projects > div {
     display: flex;
     flex-direction: row;
@@ -483,54 +517,12 @@ footer p {
     flex: 0 0 auto; 
   }
 
-/* 
 
-  .scroll-stack-scroller {
-  position: relative;
+footer div {
+  justify-content: space-around;
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: visible;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: scroll-position;
+  margin-top: 20px;
 }
-
-.scroll-stack-inner {
-  padding: 20vh 5rem 50rem;
-  min-height: 100vh;
-}
-
-.scroll-stack-card-wrapper {
-  position: relative;
-}
-
-.scroll-stack-card {
-  transform-origin: top center;
-  will-change: transform, filter;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  height: 20rem;
-  width: 100%;
-  margin: 30px 0;
-  padding: 3rem;
-  border-radius: 40px;
-  box-sizing: border-box;
-  Improve mobile performance 
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  position: relative;
-}
-
-.scroll-stack-end {
-  width: 100%;
-  height: 1px;
-} */
-
 }
 
 

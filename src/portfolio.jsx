@@ -20,6 +20,9 @@
  import TargetCursor from './cursor';
  import RippleGrid from './background';
 import useScrollAnimation from "./scroll"
+import whatsapp from "./icons/whatsapp.png"
+import x from "./icons/x.png"
+import facebook from "./icons/facebook.png"
 
 const Portfolio = () => {
 
@@ -377,7 +380,9 @@ useEffect(() => {
                         <a href="#contact">Contact</a>   
                     </div>
                     <div>
-
+                        <a href="https://wa.link/av6enk"><img src={whatsapp} alt="whatsappicon" /></a>
+                        <a href="https://x.com/Az83471962Abdul"><img src={x} alt="xicon" /></a>
+                        <a href="https://www.facebook.com/share/1YogVHb6JQ/"><img src={facebook} alt="facebookicon" /></a>
                     </div>
                     <p>&copy; 2025 Azeez Abdulrahman. All right reserved</p>
                 </footer>

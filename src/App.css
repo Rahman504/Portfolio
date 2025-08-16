@@ -383,7 +383,7 @@ footer div {
   margin: auto;
   justify-content: space-between;
   width: 40%;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 footer div a {
     display: block;
@@ -393,6 +393,9 @@ footer div a {
     font-size: 1rem;
   position: relative;
   transition: all 0.3s ease;
+}
+footer div a img {
+  width: 30%;
 }
 footer p {
   color: #E2E8F0;
@@ -521,7 +524,6 @@ footer p {
 footer div {
   justify-content: space-around;
   width: 100%;
-  margin-top: 20px;
 }
 }
 

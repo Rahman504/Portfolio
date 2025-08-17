@@ -26,6 +26,7 @@
 }
 body {
     background-color: #101b35;
+    font-family: 'Nunito', sans-serif;
 }
 .header {
     background-color: #111f42;
@@ -420,6 +421,8 @@ footer p {
   }
   .header {
     padding: 20px;
+    position: fixed;
+    width: 100%;
   }
   .header {
     justify-content: space-between;
@@ -470,6 +473,7 @@ footer p {
   .about {
     flex-direction: column-reverse;
     text-align: center;
+    padding: 140px 0px 70px 0px;
   }
   .about article.img {
     width: 60%;

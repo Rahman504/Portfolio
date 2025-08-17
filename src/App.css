@@ -524,7 +524,9 @@ html, body {
   scroll-snap-align: start;
 }
 
-
+.project-card article:last-child a {
+  font-size: .8rem;
+}
 
 
 footer div {

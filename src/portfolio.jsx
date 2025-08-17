@@ -186,7 +186,7 @@ useEffect(() => {
 
                 </header>
                 <div style={{ position: 'relative', overflow: 'hidden' }}>
-                    <div style={{
+                    <div className="ripple" style={{
                         position: 'absolute',
                         top: 0,
                         left: 0,

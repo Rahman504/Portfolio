@@ -477,6 +477,7 @@ footer p {
   }
   .ripple {
     margin-top: 100px;
+    width: 200%;
   }
   .about article.img {
     width: 60%;

@@ -473,7 +473,7 @@ footer p {
   .about {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 140px 0px 70px 0px;
+    margin-top: 100px;
   }
   .about article.img {
     width: 60%;

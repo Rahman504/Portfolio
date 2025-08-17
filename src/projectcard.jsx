@@ -1,31 +1,15 @@
-//image, imagename, projectname, languages, description, githubdirectory, projectdirectory
-import ScrollStack, { ScrollStackItem } from "./scrollstack";
+import React from "react";
+
 const ProjectCard = ({ projects }) => {
-    return(
-            // <div className="project-card">
-            //     <img src={image} alt={imagename} />
-            //     <article>
-            //         {languages.map((lang, index) => (
-            //             <span key={index}>{lang}</span>
-            //         ))}
-            //     </article>
-            //     <h2>{projectname}</h2>
-            //     <p>{description}</p>
-            //     <article>
-            //         <a href={githubdirectory} 
-            //         target="_blank"
-            //         rel="noopener noreferrer"
-            //         >View Code</a>
-            //         <a href={projectdirectory}
-            //         target="_blank"
-            //         rel="noopener noreferrer"
-            //         >View Project</a>
-            //     </article>
-            // </div>
-   <ScrollStack threshold={window.innerWidth < 768 ? 0.3 : 0.5}>
-      {projects?.map((project, index) => (
-        <ScrollStackItem key={index}>
-          <div className="project-card">
+  if (!projects || projects.length === 0) {
+    return <p>No projects available</p>;
+  }
+
+  return (
+    <section id="projects">
+      <div className="projects-scroll">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
             <img src={project.image} alt={project.imagename} />
             <article>
               {project.languages?.map((lang, i) => (
@@ -51,10 +35,10 @@ const ProjectCard = ({ projects }) => {
               </a>
             </article>
           </div>
-        </ScrollStackItem>
-      ))}
-    </ScrollStack>
-    )
-}
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default ProjectCard;

@@ -156,6 +156,7 @@ useEffect(() => {
 
     return(
         <>
+            {!isMobile && (
             <TargetCursor 
                 spinDuration={2}
                 hideDefaultCursor={true}
@@ -163,6 +164,7 @@ useEffect(() => {
                 innerColor="#F042FF"
                 glow={true} 
             />
+            )}
             <section>
                 <header className="header">
                     <h1>Abdulrahman</h1>

@@ -59,13 +59,14 @@ const Portfolio = () => {
 const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
+  const handleResize = () => setIsMobile(window.innerWidth <= 768);
+  
+  handleResize();
+  
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
   const projects = [
   {
     image: ecommerce,
@@ -150,7 +151,9 @@ useEffect(() => {
   },
 ];
 
-  
+  console.log("Projects:", projects);
+console.log("isMobile:", isMobile);
+
  
 
 

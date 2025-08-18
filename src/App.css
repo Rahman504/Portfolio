@@ -212,8 +212,9 @@ body {
 
 #projects {
   margin-top: 100px;
+  min-height: 400px;
 }
-#projects  > div {
+.grid-layout  {
   width: 80%;
   margin: 40px auto 0px;
   display: flex;

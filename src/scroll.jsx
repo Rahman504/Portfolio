@@ -8,13 +8,13 @@ const useScrollAnimation = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            sections.forEach((sec) => sec.classList.remove("active"));
-            entry.target.classList.add("active");
+            entry.target.classList.add("active");   // add when in view
+          } else {
+            entry.target.classList.remove("active"); // remove when out of view
           }
         });
       },
-      { threshold: window.innerWidth < 768 ? 0.3 : 0.5 }
-
+      { threshold: window.innerWidth < 768 ? 0.1 : 0.2 }
     );
 
     sections.forEach((section) => observer.observe(section));

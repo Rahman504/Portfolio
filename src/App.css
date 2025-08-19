@@ -281,7 +281,7 @@ body {
   transition: 2s;
 }
 #education {
-  margin: 40px auto 0px;
+  margin: 50px auto 0px;
   width: 60%;
 
 }
@@ -364,12 +364,60 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
 }
+#contact .form button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+
+}
+#contact .form button .loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 #contact .form input:focus, #contact .form textarea:focus {
   border: 1.5px solid #38BDF8;
 }
 #contact .form textarea {
   resize: none;
 }
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 15px;
+  animation: fadeInOut 3s forwards;
+  z-index: 1000;
+}
+
+.popup.success {
+  background: #38BDF8;
+  color: white;
+}
+
+.popup.error {
+  background: #f44336;
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
 
 footer {
     background-color: #111f42;

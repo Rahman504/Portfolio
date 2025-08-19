@@ -154,6 +154,62 @@ useEffect(() => {
   console.log("Projects:", projects);
 console.log("isMobile:", isMobile);
 
+
+
+
+
+const [loading, setLoading] = useState(false);
+
+
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  setLoading(true);
+  setStatus("");
+
+    try {
+      const res = await fetch("http://localhost:5000/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+  setStatus("✅ Email sent successfully!");
+  setFormData({ name: "", email: "", message: "" });
+
+  setPopup({ message: "Your message has been sent ✅", type: "success" });
+
+  setTimeout(() => setPopup({ message: "", type: "" }), 3000);
+} else {
+  setStatus("❌ Failed to send email.");
+
+  setPopup({ message: "Failed to send message ❌", type: "error" });
+
+  setTimeout(() => setPopup({ message: "", type: "" }), 3000);
+}
+    } finally {
+    setLoading(false);
+  }
+  };
+const [popup, setPopup] = useState("");
+
+
+
+
  
 
 
@@ -366,13 +422,49 @@ console.log("isMobile:", isMobile);
                 <div id="contact" className="section">
                     <h1>Contact</h1>
                     <p>I would love to hear about your project and how i could help. Please fill in the form, and I'll get back to you as soon as possible</p>
-                    <form className="form">
+                    {popup.message && (
+                    <div className={`popup ${popup.type}`}>
+                        {popup.message}
+                    </div>
+                    )}
+                    <form className="form" onSubmit={handleSubmit}>
                         <h2>Email Me 🚀</h2>
-                        <input type="email" placeholder="Your Email" name="useremail" />
-                        <input type="text" placeholder="Your Name" name="username" />
-                        <input type="text" placeholder="Subject" name="subject" />
-                        <textarea name="message" placeholder="Message" />
-                        <button>Send</button>
+                        <input type="email" placeholder="Your Email" name="email" value={formData.email}         onChange={handleChange}/>
+                        <input type="text" placeholder="Your Name" name="name" value={formData.name}         onChange={handleChange}/>
+                        <textarea name="message" placeholder="Message" value={formData.message}         onChange={handleChange}/>
+                        <button
+                        type="submit"
+                        disabled={loading}
+                        >
+                        {loading ? (
+                            <span className="flex items-center">
+                            <svg
+                                className="loader"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                                ></circle>
+                                <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                ></path>
+                            </svg>
+                            Sending...
+                            </span>
+                        ) : (
+                            "Send"
+                        )}
+                        </button>
+
                     </form>
                 </div>
                 <footer>

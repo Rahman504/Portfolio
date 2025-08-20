@@ -319,6 +319,7 @@ body {
 #contact {
   margin: 20px auto 60px;
   width: 60%;
+  height: 100vh;
 }
 #contact > p {
   width: 100%;

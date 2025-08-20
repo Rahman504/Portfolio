@@ -36,14 +36,6 @@ app.post("/send", async (req, res) => {
   }
 });
 
-if (process.env.RENDER) {
-  app.use(express.static(path.join(__dirname, "build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-  });
-}
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

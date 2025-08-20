@@ -179,7 +179,7 @@ const [formData, setFormData] = useState({
   setStatus("");
 
     try {
-      const res = await fetch('${process.env.REACT_APP_API_URL}/send', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -205,7 +205,7 @@ const [formData, setFormData] = useState({
     setLoading(false);
   }
   };
-const [popup, setPopup] = useState("");
+const [popup, setPopup] = useState({ message: "", type: "" });
 
 
 

@@ -160,7 +160,6 @@ console.log("isMobile:", isMobile);
 
 const [loading, setLoading] = useState(false);
 
-
 const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -173,13 +172,14 @@ const [formData, setFormData] = useState({
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+const API_URL = process.env.REACT_APP_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
   setLoading(true);
   setStatus("");
 
     try {
-      const res = await fetch(`${process.env.API_URL}/send`, {
+      const res = await fetch(`${API_URL}/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

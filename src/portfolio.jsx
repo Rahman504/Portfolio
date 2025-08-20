@@ -179,7 +179,7 @@ const [formData, setFormData] = useState({
   setStatus("");
 
     try {
-      const res = await fetch("http://localhost:5000/send", {
+      const res = await fetch("https://portfolio-cvr1.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

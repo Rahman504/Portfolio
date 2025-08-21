@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// API route FIRST
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -36,6 +37,7 @@ app.post("/send", async (req, res) => {
   }
 });
 
+// Serve React files AFTER API routes
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")));
 

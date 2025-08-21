@@ -357,7 +357,7 @@ const [popup, setPopup] = useState({ message: "", type: "" });
                         />
                     </div>
                 </div>
-                <div id="contact" className="section">
+                <div id="contact">
                     <h1>Contact</h1>
                     <p>I would love to hear about your project and how i could help. Please fill in the form, and I'll get back to you as soon as possible</p>
                     {popup.message && (

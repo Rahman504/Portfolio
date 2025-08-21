@@ -188,16 +188,16 @@ const API_URL = process.env.REACT_APP_API_URL;
       const data = await res.json();
 
       if (data.success) {
-  setStatus("✅ Email sent successfully!");
+  setStatus("Email sent successfully!");
   setFormData({ name: "", email: "", message: "" });
 
-  setPopup({ message: "Your message has been sent ✅", type: "success" });
+  setPopup({ message: "Your message has been sent", type: "success" });
 
   setTimeout(() => setPopup({ message: "", type: "" }), 3000);
 } else {
-  setStatus("❌ Failed to send email.");
+  setStatus("Failed to send email.");
 
-  setPopup({ message: "Failed to send message ❌", type: "error" });
+  setPopup({ message: "Failed to send message", type: "error" });
 
   setTimeout(() => setPopup({ message: "", type: "" }), 3000);
 }

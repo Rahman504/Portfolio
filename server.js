@@ -6,11 +6,14 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-app.use(cors());
+const corsOptions = {
+  origin:["https://portfolio-nine-nu-abdulrahman.vercel.app"],
+  methods: ["POST"],
+  allowedHeaders: ["Content-Type"]
+}
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-// API route FIRST
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -37,7 +40,6 @@ app.post("/send", async (req, res) => {
   }
 });
 
-// Serve React files AFTER API routes
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")));
 

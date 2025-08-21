@@ -16,6 +16,7 @@
  import ProjectCard from "./projectcard"
  import EducationCard from "./educationcard"
  import ecommerce from "../src/projects/ecommerce.png"
+ import ageCalculator from "../src/projects/age-calculator.png"
  import ui from "../src/icons/ui.png"
  import TargetCursor from './cursor';
  import RippleGrid from './background';
@@ -78,77 +79,14 @@ useEffect(() => {
     projectdirectory: "https://city-shop-ecommerce.vercel.app",
   },
   {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
-  {
-    image: ecommerce,
-    imagename: "ecommerceimage",
-    projectname: "E-commerce Website",
-    languages: ["React", "Express JS", "MongoDB"],
-    description: "A full stack e-commerce website to carry out shopping",
-    githubdirectory: "https://github.com/Rahman504/Ecommerce-frontend",
-    projectdirectory: "https://city-shop-ecommerce.vercel.app",
-  },
+    image: ageCalculator,
+    imagename: "agecalculatorimage",
+    projectname: "Age Calculator Website",
+    languages: ["HTML", "CSS", "Javascript"],
+    description: "A frontend website to calculate one's age",
+    githubdirectory: "https://github.com/Rahman504/AGE-CALCULATOR-APP",
+    projectdirectory: "https://age-calculator-app-dusky-nu.vercel.app/",
+  }
 ];
 
   console.log("Projects:", projects);

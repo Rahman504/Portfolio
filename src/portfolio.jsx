@@ -17,7 +17,7 @@
  import EducationCard from "./educationcard"
  import ecommerce from "../src/projects/ecommerce.png"
  import ageCalculator from "../src/projects/age-calculator.png"
- import astroGym from "../src/projects/astrogym-landing-page"
+ import astroGym from "../src/projects/astrogym-landing-page.png"
  import ui from "../src/icons/ui.png"
  import TargetCursor from './cursor';
  import RippleGrid from './background';

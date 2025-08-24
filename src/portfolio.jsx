@@ -17,6 +17,7 @@
  import EducationCard from "./educationcard"
  import ecommerce from "../src/projects/ecommerce.png"
  import ageCalculator from "../src/projects/age-calculator.png"
+ import astroGym from "../src/projects/astrogym-landing-page"
  import ui from "../src/icons/ui.png"
  import TargetCursor from './cursor';
  import RippleGrid from './background';
@@ -86,6 +87,15 @@ useEffect(() => {
     description: "A frontend website to calculate one's age",
     githubdirectory: "https://github.com/Rahman504/AGE-CALCULATOR-APP",
     projectdirectory: "https://age-calculator-app-dusky-nu.vercel.app/",
+  },
+  {
+    image: astroGym,
+    imagename: "astrogymimage",
+    projectname: "Astrogym Landing Page",
+    languages: ["React"],
+    description: "AstroGym is a futuristic VR fitness landing page with scroll-triggered animations, neon gradients, and interactive feature and pricing sections.",
+    githubdirectory: "https://github.com/Rahman504/Astrogym-landing-page",
+    projectdirectory: "https://astrogym-landing-page.vercel.app/",
   }
 ];
 

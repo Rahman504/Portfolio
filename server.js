@@ -18,27 +18,29 @@ app.use(bodyParser.json());
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
-  try {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+ try {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
-    await transporter.sendMail({
-      from: email,
-      to: process.env.EMAIL_USER,
-      subject: `Portfolio Contact: ${name}`,
-      text: message,
-    });
+  const info = await transporter.sendMail({
+    from: email,
+    to: process.env.EMAIL_USER,
+    subject: `Portfolio Contact: ${name}`,
+    text: message,
+  });
 
-    res.json({ success: true, message: "Email sent successfully!" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, message: "Error sending email" });
-  }
+  console.log("Message sent:", info.response);
+  res.json({ success: true, message: "Email sent successfully!" });
+} catch (err) {
+  console.error("Email sending error:", err);
+  res.status(500).json({ success: false, message: "Error sending email" });
+}
+
 });
 
 

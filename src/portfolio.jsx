@@ -18,6 +18,7 @@
  import ecommerce from "../src/projects/ecommerce.png"
  import ageCalculator from "../src/projects/age-calculator.png"
  import astroGym from "../src/projects/astrogym-landing-page.png"
+ import socialMedia from "../src/projects/social-media-dashboard.png"
  import ui from "../src/icons/ui.png"
  import TargetCursor from './cursor';
  import RippleGrid from './background';
@@ -96,6 +97,15 @@ useEffect(() => {
     description: "AstroGym is a futuristic VR fitness landing page with scroll-triggered animations, neon gradients, and interactive feature and pricing sections.",
     githubdirectory: "https://github.com/Rahman504/Astrogym-landing-page",
     projectdirectory: "https://astrogym-landing-page.vercel.app/",
+  },
+  {
+    image: socialMedia,
+    imagename: "socialimage",
+    projectname: "Social Media Dashboard",
+    languages: ["HTML", "CSS", "Javascript"],
+    description: "A responsive, multi-platform social media analytics dashboard featuring a custom-built Dark/Light mode toggle. Built with a focus on CSS Grid and Flexbox to provide a seamless viewing experience across all devices.",
+    githubdirectory: "https://github.com/Rahman504/SOCIAL-MEDIA-DASHBOARD-WITH-THEME-SWITCHER",
+    projectdirectory: "https://social-media-dashboard-with-theme-s-mauve.vercel.app/",
   }
 ];
 

@@ -81,15 +81,6 @@ useEffect(() => {
     projectdirectory: "https://city-shop-ecommerce.vercel.app",
   },
   {
-    image: ageCalculator,
-    imagename: "agecalculatorimage",
-    projectname: "Age Calculator Website",
-    languages: ["HTML", "CSS", "Javascript"],
-    description: "A frontend website to calculate one's age",
-    githubdirectory: "https://github.com/Rahman504/AGE-CALCULATOR-APP",
-    projectdirectory: "https://age-calculator-app-dusky-nu.vercel.app/",
-  },
-  {
     image: astroGym,
     imagename: "astrogymimage",
     projectname: "Astrogym Landing Page",
@@ -106,6 +97,15 @@ useEffect(() => {
     description: "A responsive, multi-platform social media analytics dashboard featuring a custom-built Dark/Light mode toggle. Built with a focus on CSS Grid and Flexbox to provide a seamless viewing experience across all devices.",
     githubdirectory: "https://github.com/Rahman504/SOCIAL-MEDIA-DASHBOARD-WITH-THEME-SWITCHER",
     projectdirectory: "https://social-media-dashboard-with-theme-s-mauve.vercel.app/",
+  },
+  {
+    image: ageCalculator,
+    imagename: "agecalculatorimage",
+    projectname: "Age Calculator Website",
+    languages: ["HTML", "CSS", "Javascript"],
+    description: "A frontend website to calculate one's age",
+    githubdirectory: "https://github.com/Rahman504/AGE-CALCULATOR-APP",
+    projectdirectory: "https://age-calculator-app-dusky-nu.vercel.app/",
   }
 ];
 
